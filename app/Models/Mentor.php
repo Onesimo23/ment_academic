@@ -9,7 +9,7 @@ class Mentor extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['specialization', 'other_fields'];
+    protected $fillable = ['name', 'email', 'password', 'course', 'specialization', 'preferences'];
 
     public function user()
     {

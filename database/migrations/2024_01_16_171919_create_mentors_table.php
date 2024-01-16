@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('course'); // Pode ser nulo se não for aplicável
             $table->string('specialization');
-            $table->json('preferences'); // Usar JSON para armazenar preferências
+            $table->json('preferences')->nullable(); // Usar JSON para armazenar preferências
             $table->boolean('active')->default(true); // Indicar se o mentor está ativo
             $table->rememberToken(); // Adicionar campo para "remember me"
             $table->timestamps();

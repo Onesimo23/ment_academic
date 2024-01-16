@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\Auth\MentorLoginController;
+use App\Http\Controllers\Auth\MentorRegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,7 +34,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/mentors', [MentorController::class, 'store'])->name('mentors.store');
     Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
     Route::post('/students', [StudentController::class, 'store'])->name('students.store');
+// Rotas de Login
+// Route::get('/mentor/login', [MentorLoginController::class, 'showLoginForm'])->name('mentor.login');
+// Route::post('/mentor/login', [MentorLoginController::class, 'login']);
+// Route::post('/mentor/logout', [MentorLoginController::class, 'logout'])->name('mentor.logout');
 
+// Rotas de Registro
+Route::get('/mentor/register', [MentorRegisterController::class, 'showRegistrationForm'])->name('mentor.register');
+Route::post('/mentor/register', [MentorRegisterController::class, 'create']);
 
 
 });
