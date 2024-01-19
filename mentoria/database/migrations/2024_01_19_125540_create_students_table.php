@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('area_de_formacao');
             $table->string('especializacao');
-            $table->json('preferencias'); // Armazenar preferências como JSON
+            $table->string('preferencias');
             $table->timestamps();
         });
         
