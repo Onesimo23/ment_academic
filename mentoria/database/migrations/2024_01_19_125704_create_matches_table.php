@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('matches', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->enum('role', ['student', 'mentor', 'admin'])->default('student');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->foreignId('student_id')->constrained();
+            $table->foreignId('mentor_id')->constrained();
+            $table->timestamp('criado_em')->useCurrent(); // Utilizar valor padrão do banco de dados
             $table->timestamps();
         });
         
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('matches');
     }
 };
