@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\MentorController;
 
 
 
@@ -31,4 +31,12 @@ Route::put('/students/{student}', [StudentController::class, 'update'])->name('s
 Route::delete('/students/{student}', [StudentController::class, 'destroy'])->name('students.destroy');
 
 
-require __DIR__.'/auth.php';
+Route::get('/mentors', [MentorController::class, 'index'])->name('mentors.index');
+Route::get('/mentors/create', [MentorController::class, 'create'])->name('mentors.create');
+Route::post('/mentors', [MentorController::class, 'store'])->name('mentors.store');
+Route::get('/mentors/{mentor}', [MentorController::class, 'show'])->name('mentors.show');
+Route::get('/mentors/{mentor}/edit', [MentorController::class, 'edit'])->name('mentors.edit');
+Route::put('/mentors/{mentor}', [MentorController::class, 'update'])->name('mentors.update');
+Route::delete('/mentors/{mentor}', [MentorController::class, 'destroy'])->name('mentors.destroy');
+
+require __DIR__ . '/auth.php';
