@@ -30,10 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
    
-    Route::get('/mentors/create', [MentorController::class, 'create'])->name('mentors.create');
-    Route::post('/mentors', [MentorController::class, 'store'])->name('mentors.store');
-    Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
-    Route::post('/students', [StudentController::class, 'store'])->name('students.store');
+    // Route::get('/mentors/create', [MentorController::class, 'create'])->name('mentors.create');
+    // Route::post('/mentors', [MentorController::class, 'store'])->name('mentors.store');
+    // Route::get('/students/create', [StudentController::class, 'create'])->name('students.create');
+    // Route::post('/students', [StudentController::class, 'store'])->name('students.store');
 // Rotas de Login
 // Route::get('/mentor/login', [MentorLoginController::class, 'showLoginForm'])->name('mentor.login');
 // Route::post('/mentor/login', [MentorLoginController::class, 'login']);
