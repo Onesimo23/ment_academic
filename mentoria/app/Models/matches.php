@@ -18,6 +18,6 @@ class Matches extends Model
 
     public function mentor()
     {
-        return $this->belongsTo(Mentors::class);
+        return $this->belongsTo(Mentor::class);
     }
 }

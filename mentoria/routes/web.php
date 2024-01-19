@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\MentorController;
+use App\Http\Controllers\MatchController;
 
 
 
@@ -38,5 +39,14 @@ Route::get('/mentors/{mentor}', [MentorController::class, 'show'])->name('mentor
 Route::get('/mentors/{mentor}/edit', [MentorController::class, 'edit'])->name('mentors.edit');
 Route::put('/mentors/{mentor}', [MentorController::class, 'update'])->name('mentors.update');
 Route::delete('/mentors/{mentor}', [MentorController::class, 'destroy'])->name('mentors.destroy');
+
+
+Route::get('/matches', [MatchController::class, 'index'])->name('matches.index');
+Route::get('/matches/create', [MatchController::class, 'create'])->name('matches.create');
+Route::post('/matches/store', [MatchController::class, 'store'])->name('matches.store');
+Route::get('/matches/edit/{id}', [MatchController::class, 'edit'])->name('matches.edit');
+Route::put('/matches/update/{id}', [MatchController::class, 'update'])->name('matches.update');
+Route::delete('/matches/destroy/{id}', [MatchController::class, 'destroy'])->name('matches.destroy');
+
 
 require __DIR__ . '/auth.php';
