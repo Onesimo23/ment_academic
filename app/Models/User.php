@@ -23,7 +23,15 @@ class User extends Authenticatable
         'password',
         'role',
     ];
-
+    public function isStudent()
+    {
+        return !is_null($this->student);
+    }
+    
+    public function student()
+    {
+        return $this->hasOne(Student::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
