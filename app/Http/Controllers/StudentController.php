@@ -17,8 +17,9 @@ class StudentController extends Controller
 
     public function create()
     {
-        // Se precisar de dados adicionais para o formulário de adição, adicione aqui.
-        return view('student.create');
+        $students = Student::with('user')->get();
+        $users = User::all(); 
+        return view('student.index', compact('students','users'));
     }
 
     public function store(Request $request)

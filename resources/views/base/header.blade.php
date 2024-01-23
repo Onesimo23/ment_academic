@@ -33,7 +33,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <p class="navbar-brand brand-logo mr-5"> <img src="{{asset('assets/images/logotipoico2.png')}}" class="mr-2" alt="logo"/> SMA</p>
+        <p class="navbar-brand brand-logo mr-5">  Mentoria Acadé...</p>
         {{-- <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="assets/images/logotipoico2.png" class="mr-2" alt="logo"/></a> --}}
         {{-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo"/></a> --}}
       </div>
@@ -229,61 +229,54 @@
       <!-- partial -->
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item">
+    <ul class="nav">
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('dashboard') }}">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
             </a>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Alunos</span>
-              <i class="menu-arrow"></i>
+                <i class="icon-layout menu-icon"></i>
+                <span class="menu-title">Alunos</span>
+                <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{{ route('dashboard') }}">Adicionar Alunos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{ route('dashboard') }}">ver Alunos</a></li>
-
-              </ul>
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('students.create') }}">Adicionar Alunos</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('students.index') }}">Ver Alunos</a></li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">Usuários</span>
-              <i class="menu-arrow"></i>
+                <i class="icon-head menu-icon"></i>
+                <span class="menu-title">Usuários</span>
+                <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="{{ route('dashboard') }}">Ver Mentores</a></li>
-                {{-- <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Mentor</a></li> --}}
-              </ul>
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="{{ route('mentors.index') }}">Ver Mentores</a></li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-item">
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="icon-bar-graph menu-icon"></i>
-              <span class="menu-title">Achar mentores</span>
-              <i class="menu-arrow"></i>
+                <i class="icon-bar-graph menu-icon"></i>
+                <span class="menu-title">Achar mentores</span>
+                <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link"   href="{{ route('dashboard') }}">ver mentores disponiveis</a></li>
-                <li class="nav-item"> <a class="nav-link"  href="{{ route('dashboard') }}">Gerir mentor</a></li>
-              </ul>
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('matches.index') }}">Ver mentores disponíveis</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('matches.index') }}">Gerir mentores</a></li>
+                </ul>
             </div>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="/relatorios">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Relatorios</span>
-            </a>
-          </li> -->
+        </li>
+    </ul>
+</nav>
 
-      </nav>
       <!-- partial -->
 
 
